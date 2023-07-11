@@ -7,3 +7,6 @@
 -- lvim.builtin.which_key.mappings["dS"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" }
 
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<C-h>"] = ":bnext<cr>"
+lvim.keys.normal_mode["<C-l>"] = ":bprevious<cr>"
+lvim.keys.normal_mode["<C-x>"] = ":BufferKill<cr>"
