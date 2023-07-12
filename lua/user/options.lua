@@ -22,14 +22,12 @@ lvim.format_on_save = {
 }
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.dap.active = true
-lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open = true
 
 -- statusline
 lvim.builtin.lualine.style = 'lvim'
-lvim.builtin.lualine.options.theme = "gruvbox"
-lvim.builtin.alpha.active = true
 
 -- dashboard
+lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 
 -- terminal

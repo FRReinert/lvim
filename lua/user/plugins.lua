@@ -11,15 +11,7 @@ lvim.plugins = {
 	{
 		"ray-x/lsp_signature.nvim",
 		config = function()
-			require("lsp_signature").setup({
-				floating_window = false,
-				doc_lines = 3,
-				max_height = 20,
-				max_width = 120,
-				hint_prefix = "",
-				transparency = 50,
-				toggle_key = "<C-s>",
-			})
+			require("user.plugins.lsp_signature").config()
 		end,
 	},
 	{
@@ -59,11 +51,11 @@ lvim.plugins = {
 	},
 
 	-- DAP configuration
-  {
-    "microsoft/vscode-js-debug",
-    lazy = true,
-    build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-  },
+	{
+		"microsoft/vscode-js-debug",
+		lazy = true,
+		build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+	},
 	{
 		"mxsdev/nvim-dap-vscode-js",
 		ft = {
@@ -77,17 +69,7 @@ lvim.plugins = {
 		lazy = true,
 		event = { "BufReadPre", "BufNew" },
 		config = function()
-			require("dap-vscode-js").setup({
-				debugger_path = "/home/frreinert/.local/share/lunarvim/site/pack/lazy/opt/vscode-js-debug",
-				-- debugger_cmd = { "js-debug-adapter" },
-				adapters = {
-					"pwa-node",
-					"pwa-chrome",
-					"pwa-msedge",
-					"node-terminal",
-					"pwa-extensionHost",
-				},
-			})
+			require("user.plugins.nvim-dap-vscode-js").config()
 		end,
 	},
 }
