@@ -11,7 +11,21 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 			rootPath = "${workspaceFolder}",
 			console = "integratedTerminal",
 			internalConsoleOptions = "neverOpen",
-      runtimeExecutable = "ts-node-esm"
+			runtimeExecutable = "ts-node-esm",
+		},
+		{
+			type = "pwa-node",
+			request = "launch",
+			name = "Debug Jest Tests TS",
+			runtimeArgs = {
+				"./node_modules/jest/bin/jest.js",
+				"--runInBand",
+			},
+			cwd = "${workspaceFolder}",
+      rootPath = "${workspaceFolder}",
+			console = "integratedTerminal",
+			internalConsoleOptions = "neverOpen",
+      runtimeExecutable = "ts-node-esm",
 		},
 		{
 			type = "pwa-node",

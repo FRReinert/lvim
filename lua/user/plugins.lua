@@ -39,18 +39,13 @@ lvim.plugins = {
 		end,
 	},
 	{
-		"ChristianChiarulli/swenv.nvim",
-		enabled = true,
-		event = { "BufRead", "BufNew" },
-	},
-	{
 		"stevearc/dressing.nvim",
 		config = function()
 			require("dressing").setup()
 		end,
 	},
 
-	-- DAP configuration
+	-- DAP plugins
 	{
 		"microsoft/vscode-js-debug",
 		lazy = true,
@@ -71,5 +66,14 @@ lvim.plugins = {
 		config = function()
 			require("user.plugins.nvim-dap-vscode-js").config()
 		end,
+	},
+	{
+		"mfussenegger/nvim-dap-python",
+		lazy = true,
+    config = require("user.dap.python").config(),
+		opts = {
+			include_configs = true,
+			console = "internalConsole",
+		}
 	},
 }

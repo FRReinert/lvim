@@ -12,4 +12,7 @@ reload "user.telescope"
 reload "user.whichkey"
 reload "user.colorschemes"
 reload "user.lsp"
+
+-- DAP configurations
 reload "user.dap.ts-js"
+reload "user.dap.python"
