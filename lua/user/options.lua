@@ -1,18 +1,19 @@
--- clipboard
-vim.g.clipboard = {
-  name = "WslClipboard",
-  copy = {
-    ["+"] = {"clip.exe"},
-    ["*"] = {"clip.exe"},
-  },
-  paste = {
-    ["+"] = {"powershell.exe", "-c", "[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))"},
-    ["*"] = {"powershell.exe", "-c", "[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))"},
-  },
-  cache_enabled = false
-}
+-- WSL clipboard
+-- vim.g.clipboard = {
+--   name = "WslClipboard",
+--   copy = {
+--     ["+"] = {"clip.exe"},
+--     ["*"] = {"clip.exe"},
+--   },
+--   paste = {
+--     ["+"] = {"powershell.exe", "-c", "[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))"},
+--     ["*"] = {"powershell.exe", "-c", "[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))"},
+--   },
+--   cache_enabled = false
+-- }
 
 -- General
+vim.opt.relativenumber = true
 lvim.log.level = "warn"
 lvim.leader = "space"
 lvim.format_on_save = {
